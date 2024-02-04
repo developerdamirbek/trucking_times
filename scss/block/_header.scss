@@ -1,0 +1,124 @@
+.header {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu_btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_main__block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header_logo__block {
+    width: 175px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_phone__number {
+    color: rgb(243, 243, 243);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-image: url(../../images/phone-icon.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header_item__link {
+    color: rgb(243, 243, 243);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header_btn {
+    background: rgb(106, 54, 156);
+    color: rgb(243, 243, 243);
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 40px 30px;
+}
+
+@media screen and (max-width: 1430px) {
+    .header_list {
+        display: none;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .header_phone__number {
+        display: none;
+    }
+
+    .header__links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header_btn {
+        display: none;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header_logo__block {
+        width: 148px;
+    }
+}
